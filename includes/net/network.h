@@ -1,10 +1,9 @@
-#ifndef NET_H
-#define NET_H
+#ifndef NETWORK_H
+#define NETWORK_H
 
 typedef struct net_context{
     char* host;
     int* port;
-
     int socket;
 }net_context_t;
 
