@@ -36,7 +36,9 @@ int net_initialize ( net_context_t* ctx ) {
         return -1; // Invalid context Missing elements
     }
 
-    struct sockaddr_in addr;
+    struct sockaddr_in address;
+    memset(&address, 0, sizeof(address));
+
     address.sin_family = AF_INET;
     address.sin_port = htons(*(ctx->port));
     address.sin_addr.s_addr = htonl(INADDR_ANY);
